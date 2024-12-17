@@ -47,6 +47,7 @@ a. Mengambil data users
     SELECT id, name, email FROM users;
 b. Mengambil data items
     SELECT * FROM items WHERE price > 1000000;
+    SELECT * FROM items WHERE name LIKE '%uniklo%';
 c. Menampilkan data items join dengan kategori
     SELECT * FROM items WHERE name LIKE '%uniklo%';
 
