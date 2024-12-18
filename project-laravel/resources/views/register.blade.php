@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas - Hari 1</title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('title')
+    Register
+@endsection
+
+@section('content')
     <h1>Buat Account Baru!</h1>
     <h3>Sign Up Form</h3>
     <form action="/welcome" method="POST">
@@ -32,5 +31,4 @@
         <textarea name="bio" id="bio" rows="10" cols="30"></textarea><br>
         <input type="submit" value="Sign Up">
     </form>
-</body>
-</html>
+@endsection
