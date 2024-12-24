@@ -58,7 +58,24 @@
         </li>
         </ul>
     </li>
-    
+    <li class="nav-item">
+        <a href="/film" class="nav-link {{ Request::is('film*') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-film"></i>
+        <p>
+            Film
+            {{-- <span class="right badge badge-danger">New</span> --}}
+        </p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="/genre" class="nav-link {{ Request::is('genre*') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-layer-group"></i>
+        <p>
+            Genre
+            {{-- <span class="right badge badge-danger">New</span> --}}
+        </p>
+        </a>
+    </li>
     </ul>
 </nav>
 <!-- /.sidebar-menu -->
