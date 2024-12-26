@@ -12,6 +12,11 @@ class FilmController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'show']);
+    }
+
     public function index()
     {
         $films = Film::all();
@@ -75,9 +80,8 @@ class FilmController extends Controller
     public function show(string $id)
     {
         $film = Film::find($id);
-        $genre = Genre::find($film->genre_id);
 
-        return view('film.show', compact('film','genre'));
+        return view('film.show', compact('film',));
     }
 
     /**

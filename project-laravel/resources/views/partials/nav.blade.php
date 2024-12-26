@@ -13,6 +13,20 @@
     </li>
 </ul>
 
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+        @auth
+        <form action="/logout" method="POST" class="form-inline">
+            @csrf
+            <button type="submit" class="btn btn-danger">Logout</button>
+        </form>
+        @endauth
+        @guest
+            <a href="/login" class="btn btn-info">Login</a>
+        @endguest
+    </li>
+</ul>
+
 <!-- Right navbar links -->
 </nav>
 <!-- /.navbar -->
